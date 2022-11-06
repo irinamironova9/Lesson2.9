@@ -5,6 +5,9 @@ import java.util.HashMap;
 public class Map {
     private final HashMap<String, Integer> map = new HashMap<>();
 
+    public Map() {
+    }
+
     public void addOrUpdate(String key, int value) {
         if (key == null || key.isBlank()) {
             throw new IllegalArgumentException();

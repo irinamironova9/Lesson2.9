@@ -22,11 +22,7 @@ public class Product {
     public String toString() {
         return String.format("Продукт: %s, цена %.2f руб., кол-во %s шт., " +
                         "куплен - %s",
-                name, price, amount, booleanToString());
-    }
-
-    private String booleanToString() {
-        return this.isBought ? "да" : "нет";
+                name, price, amount, this.isBought ? "да" : "нет");
     }
 
     @Override

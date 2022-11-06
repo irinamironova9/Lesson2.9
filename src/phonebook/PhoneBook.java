@@ -5,6 +5,9 @@ import java.util.HashMap;
 public class PhoneBook {
     private final HashMap<String, String> phoneBook = new HashMap<>();
 
+    public PhoneBook() {
+    }
+
     public void addPhone(String name, String phoneNumber) {
         if (name == null || phoneNumber == null ||
                 name.isBlank() || phoneNumber.isBlank()) {

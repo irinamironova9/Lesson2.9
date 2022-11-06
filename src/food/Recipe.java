@@ -19,7 +19,7 @@ public class Recipe {
 
     public void addIngredient(Product product, int amount) {
         if (product == null) {
-            throw new IllegalArgumentException("Продукт не может быть null!");
+            throw new IllegalArgumentException("Укажите продукт!");
         }
 
         if (ingredients.containsKey(product)) {
@@ -37,6 +37,15 @@ public class Recipe {
         return sum;
     }
 
+    private StringBuilder printIngredients() {
+        StringBuilder sb = new StringBuilder();
+        for (Product product : ingredients.keySet()) {
+            sb.append(product.getName()).append(" - ").append(ingredients.get(product))
+                    .append(" шт.\n");
+        }
+        return sb;
+    }
+
     @Override
     public String toString() {
         return String.format("Рецепт '%s':\n" +
@@ -46,15 +55,6 @@ public class Recipe {
                 dishName,
                 calculateCost(),
                 printIngredients());
-    }
-
-    private StringBuilder printIngredients() {
-        StringBuilder sb = new StringBuilder();
-        for (Product product : ingredients.keySet()) {
-            sb.append(product.getName()).append(" - ").append(ingredients.get(product))
-                    .append(" шт.\n");
-        }
-        return sb;
     }
 
     @Override

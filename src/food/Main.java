@@ -12,25 +12,25 @@ public class Main {
         Product apple = new Product("Яблоко", 9.00f, 6);
         Product chocolate = new Product("Шоколад", 67.90f, 1);
 
-//        ProductList toBuy = new ProductList();
-//        toBuy.addProduct(milk);
-//        toBuy.addProduct(bread);
-//        toBuy.addProduct(egg);
-//        toBuy.addProduct(apple);
-//        toBuy.addProduct(chocolate);
-//
-//        System.out.println(toBuy);
-//
-//        toBuy.markAsBought(milk);
-//        toBuy.removeProduct(apple);
-//        toBuy.markAsBought(apple);
-//
-//        System.out.println(milk.getIsBought());
-//        System.out.println(egg.getIsBought());
-//
-//        System.out.println();
-//
-//        System.out.println(toBuy);
+        ProductList toBuy = new ProductList();
+        toBuy.addProduct(milk);
+        toBuy.addProduct(bread);
+        toBuy.addProduct(egg);
+        toBuy.addProduct(apple);
+        toBuy.addProduct(chocolate);
+
+        System.out.println(toBuy);
+
+        toBuy.markAsBought(milk);
+        toBuy.removeProduct(apple);
+        toBuy.markAsBought(apple);
+
+        System.out.println(milk.getIsBought());
+        System.out.println(egg.getIsBought());
+
+        System.out.println();
+
+        System.out.println(toBuy);
 
         Recipe pie = new Recipe("Пирог");
         pie.addIngredient(egg, 3);
@@ -46,16 +46,16 @@ public class Main {
         System.out.println(pie);
         System.out.println(frenchToast);
 
-//        CookBook cookBook = new CookBook();
-//        cookBook.addRecipe(pie);
-//        cookBook.addRecipe(frenchToast);
-//        cookBook.addRecipe("Лимонад");
-//
-//        System.out.println(pie);
-//
-//        System.out.println(cookBook);
-//
-//        task2();
+        CookBook cookBook = new CookBook();
+        cookBook.addRecipe(pie);
+        cookBook.addRecipe(frenchToast);
+        cookBook.addRecipe("Лимонад");
+
+        System.out.println(pie);
+
+        System.out.println(cookBook);
+
+        task2();
     }
 
     public static void task2() {

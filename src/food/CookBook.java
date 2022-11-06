@@ -7,9 +7,12 @@ import java.util.Set;
 public class CookBook {
     private final Set<Recipe> recipes = new HashSet<>();
 
+    public CookBook() {
+    }
+
     public void addRecipe(Recipe recipe) {
         if (recipe == null) {
-            throw new IllegalArgumentException("Рецепт не может быть null!");
+            throw new IllegalArgumentException("Укажите рецепт!");
         }
 
         if (recipes.contains(recipe)) {
