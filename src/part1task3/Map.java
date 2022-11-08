@@ -1,6 +1,7 @@
 package part1task3;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class Map {
     private final HashMap<String, Integer> map = new HashMap<>();
@@ -30,5 +31,18 @@ public class Map {
             sb.append(key).append(" - ").append(map.get(key)).append('\n');
         }
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Map map1 = (Map) o;
+        return Objects.equals(map, map1.map);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(map);
     }
 }

@@ -44,4 +44,17 @@ public class CookBook {
         }
         return "Книга рецептов:\n" + sb;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CookBook cookBook = (CookBook) o;
+        return Objects.equals(recipes, cookBook.recipes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(recipes);
+    }
 }

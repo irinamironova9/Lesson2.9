@@ -18,26 +18,6 @@ public class Product {
         this.amount = amount;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Продукт: %s, цена %.2f руб., кол-во %s шт., " +
-                        "куплен - %s",
-                name, price, amount, this.isBought ? "да" : "нет");
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return name.equals(product.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
-    }
-
     public String getName() {
         return name;
     }
@@ -73,4 +53,25 @@ public class Product {
     protected void setIsBought(boolean isBought) {
         this.isBought = isBought;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Продукт: %s, цена %.2f руб., кол-во %s шт., " +
+                        "куплен - %s",
+                name, price, amount, this.isBought ? "да" : "нет");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return name.equals(product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
+

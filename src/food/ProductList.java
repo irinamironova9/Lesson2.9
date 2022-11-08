@@ -1,6 +1,7 @@
 package food;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class ProductList {
@@ -56,5 +57,18 @@ public class ProductList {
     @Override
     public String toString() {
         return "Список продуктов:\n" + printProducts();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductList that = (ProductList) o;
+        return Objects.equals(products, that.products);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(products);
     }
 }

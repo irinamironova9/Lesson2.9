@@ -17,6 +17,10 @@ public class Recipe {
         }
     }
 
+    public String getDishName() {
+        return dishName;
+    }
+
     public void addIngredient(Product product, int amount) {
         if (product == null) {
             throw new IllegalArgumentException("Укажите продукт!");
@@ -68,9 +72,5 @@ public class Recipe {
     @Override
     public int hashCode() {
         return Objects.hash(dishName);
-    }
-
-    public String getDishName() {
-        return dishName;
     }
 }

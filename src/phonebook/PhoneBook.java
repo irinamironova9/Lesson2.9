@@ -1,6 +1,7 @@
 package phonebook;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class PhoneBook {
     private final HashMap<String, String> phoneBook = new HashMap<>();
@@ -23,5 +24,18 @@ public class PhoneBook {
             sb.append(key).append(" ").append(phoneBook.get(key)).append('\n');
         }
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PhoneBook phoneBook1 = (PhoneBook) o;
+        return Objects.equals(phoneBook, phoneBook1.phoneBook);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(phoneBook);
     }
 }
